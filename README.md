@@ -1,19 +1,48 @@
-# restaurant-clone
+# Bella Vista Bistro
 
-## Zero-Human Multi-Agent Platform
+A classic multi-page restaurant marketing website built with **Next.js 14** (App Router).
 
-This repository is managed by the Zero-Human multi-agent platform.
+## Route Table
 
-### Getting Started
+| Route | Page |
+|-------|------|
+| `/` | Home — hero, featured dishes, hours/location teaser |
+| `/menu` | Full menu — Starters, Mains, Desserts |
+| `/about` | Restaurant story |
+| `/gallery` | Responsive photo grid |
+| `/contact` | Address, hours, contact form |
+| `/reservations` | Reservation form (UI only) |
 
-1. Configure your agents in the platform dashboard
-2. Create issues or feature requests
-3. Agents will automatically work on tasks
+## Project Structure
 
-### Documentation
+```
+app/
+  layout.tsx          — shared Layout (Header + Footer)
+  page.tsx            — Home page
+  globals.css         — all styles (CSS custom properties)
+  components/
+    Header.tsx        — sticky nav with mobile hamburger
+    Footer.tsx        — links, socials, copyright
+  data/
+    siteContent.ts    — restaurant copy, hours, routes
+    menu.ts           — menu categories + featured dishes
+    gallery.ts        — gallery image metadata
+  menu/page.tsx
+  about/page.tsx
+  gallery/page.tsx
+  contact/page.tsx
+  reservations/page.tsx
+```
 
-- See `docs/` for project documentation
-- See `.paperclip/` for platform configuration
-- See `memory-bank/` for agent memory and context
+## Get Started
 
-For more information, visit the Zero-Human platform documentation.
+```bash
+npm install
+npm run dev       # http://localhost:3000
+npm run build     # production build
+npm run start     # serve production build
+```
+
+## Notes
+
+Out of scope for v1: online ordering, authentication, CMS integration, payment processing, real reservation backend.
