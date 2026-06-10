@@ -1,0 +1,17 @@
+node_modules/
+.pnpm-store/
+.yarn/
+.next/
+dist/
+build/
+out/
+.turbo/
+.cache/
+.env
+.env.local
+.env*.local
+*.log
+.DS_Store
+*.pyc
+__pycache__/
+.venv/
